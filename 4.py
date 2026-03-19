@@ -14,17 +14,11 @@ class Car:
         self.distance = 0
         self.cur_speed = 60
         self.distance = self.distance + self.cur_speed * hours
-
-Cars = []
-count = 0
-while count < 5:
-    car = input("Enter the car name: ")
-    Cars.append(car)
-    count += 1
-print(Cars)
 import random
-for car in Cars:
-    max_speed = random.randint(100,200)
-    car.max_speed = max_speed
-    car.reg_num = ("ABC -"+str(count))
-    print(f"The {car} registered as {car.reg_num} has a max speed of {car.max_speed}")
+count = 0
+while count < 2:
+    name = input("Enter the car name: ")
+    speed = random.randint(100,200)
+    reg = ("ABC-"+ str(count+1))
+    print(f"Name: {name}, Registration num: {reg} Max speed: {speed}")
+    count = count + 1
