@@ -11,6 +11,8 @@ class Car:
         if self.cur_speed>self.max_speed:
             self.cur_speed = self.max_speed
     def drive(self, hours):
-        self.distance = 0
-        self.cur_speed = 60
         self.distance = self.distance + self.cur_speed * hours
+
+    def get_info(self):
+        return {"reg_num":self.reg_num, "max_speed":self.max_speed,
+                "cur_speed": self.cur_speed, "distance":self.distance}
